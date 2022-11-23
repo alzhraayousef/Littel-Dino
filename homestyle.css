@@ -1,0 +1,69 @@
+#body{
+    margin: 0%;
+}
+#mainDiv{
+    width: 100%;
+    height: 653px;
+    display: flex;
+}
+#contentDiv{
+    width: 50%;
+    margin-top: 15%;
+    float: left;
+    text-align: center;
+
+}
+#imgContainerDiv{
+    margin-top: 5%;
+    width: 40%;
+    margin-right: 5%;
+    background-image:url("homeImages/start_back.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 600;
+
+}
+#mainDiv-img{
+    
+    width: 100%;
+    height: 590;
+}
+
+
+#contentDiv-h1{
+    
+    font-size: 60px;
+    color:#253b70;
+    line-height: 60px;
+    font-family: 'M PLUS Rounded 1c', sans-serif ;
+    font-weight: 800;
+    text-shadow: 5px 6px 0 #e0d0ec;
+    
+}
+#contentDiv-p{   
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    color:#253b70;
+    font-family: 'Open Sans', sans-serif;
+}
+#backButton,#nextButton{
+    width: 50;
+    height: 50;
+    margin-top: 20%;
+    border: 1px  solid crimson;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#backButton{
+   margin-left: 2% ;
+}
+#nextButton{
+    margin-right: 2%;
+
+}
+#nextIcon,#backIcon{
+    font-size: large;
+}
+
+
