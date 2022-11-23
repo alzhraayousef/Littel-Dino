@@ -187,7 +187,7 @@ text.appendChild(link1);
 div_Images.setAttribute("class","image");
 content.appendChild(div_Images);
 //image1
-img1.setAttribute("src","homeImages/image1.jpg");
+img1.setAttribute("src","homeImages/LearningImage.png");
 img1.setAttribute("alt","Images");
 img1.setAttribute("class","img1");
 div_Images.appendChild(img1);
@@ -254,11 +254,12 @@ text.appendChild(link1);
 div_Images.setAttribute("class","image");
 content.appendChild(div_Images);
 // image2
-img1.setAttribute("src","homeImages/image2.jpg");
+img1.setAttribute("src","homeImages/gaming.png");
 img1.setAttribute("alt","Images");
 img1.setAttribute("class","img1");
 div_Images.appendChild(img1);
 img1.style.marginLeft='800px';
+img1.style.marginTop='-100px';
 
 
 
@@ -320,7 +321,7 @@ function changeBackgroundColor(link){
     },100)
 }
 function resetBackgroundColor(link){
-    link.style.backgroundColor="#fd5c37"
+    link.style.backgroundColor="rgb(244, 150, 166)"
 }
 
 
