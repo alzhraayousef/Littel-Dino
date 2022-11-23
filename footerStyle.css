@@ -1,0 +1,102 @@
+#footer_container{
+    background-color: rgb(28, 28, 93);
+    width:100%;
+    height: 450px;
+}
+#footer{
+   
+    color: white;
+}
+
+#dinosaur_div{
+    float: left;
+}
+h2
+{
+    color: white;
+    margin-left: 15%;
+    
+}
+#float
+{
+    clear: both;
+}
+#dinosaur_img_div
+{
+    padding-left: 10%;
+    padding-top: 5%;
+}
+#Little_Dino_Center
+{
+    color: white;
+    font-family: inherit;
+}
+#iconImages
+{
+    padding-top: 20px;
+    float: left;
+}
+.icons
+{
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;  
+     
+}
+#cat_img
+{
+    margin-left: 5%;
+    float: left;
+    
+}
+#OurContacts_div
+{
+    margin-left: 5%;
+    float: left;
+    color: white;
+    margin-top: 20px;
+}
+.Our_Contacts_imgs
+{
+    float: left;
+    margin-left: 10px;
+    
+}
+.Our_Contacts_data
+{
+    margin-left: 20px;
+    float: right;
+}
+#OurGallery_div{
+   float: right;
+   margin-right: 15%;
+    color: white;
+}
+#fristThreeImg{
+    float: left;
+}
+#lastThreeImg{
+    float: left;
+    margin-top: 20px;
+}
+.gallery_imgs{
+    margin-left: 10px;
+    border-radius: 20px;
+    width: 15%;
+    height: 15%;
+}
+#Open_Hours_div{
+    float: right;
+    margin-right: 10%;
+    color: white;
+    width: 20%;
+    height: 20%;
+    text-align: center;
+    margin-top: -250px;
+    
+}
+#days_and_times{
+    padding: 10%;
+    border-radius: 15%;
+    background-color: rgb(66, 227, 236);
+}
