@@ -134,7 +134,8 @@ document.querySelector("#SmallList2").addEventListener("mouseout", function () {
 
 // put style and events
 navDiv.style = `position:fixed; top:-16px; left:0px;
-                background-color:yellow; width:100%; height:60px; 
+                background-color:white; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                ;width:100%; height:60px; 
                 padding-top:40px ; z-index:1;`;
 
 navList.style = `position:relative; top:-75px; left:450px; `;
