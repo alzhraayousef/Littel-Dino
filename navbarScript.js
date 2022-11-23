@@ -14,7 +14,7 @@ document.body.addEventListener("mousemove", function (e) {
 var navDiv = document.createElement("div");
 
 var logo = document.createElement("span");
-logo.innerHTML = "<img src='logo.png' width='150px' height='65px'>";
+logo.innerHTML = "<img src='homeImages/logo.png' width='150px' height='65px'>";
 navDiv.appendChild(logo);
 logo.style = `position:relative; top:-18px; left:100px; `;
 
