@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(226, 246, 253);
+}
+#div2{
+    margin-top: 150px;
+    margin-left: 650px;
+   transition: 1s;
+}
+#div2:hover{
+    transform: translateY(-30px);
+ }
+#div2 a{
+    text-decoration: none;
+    background-color: lightpink;
+    color: white;
+    padding: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 2px 1px 6px rgba(94, 91, 91, 0.488);
+    transition: 1.5s;
+}
+#div2 a:hover{
+   background-color: rgb(209, 109, 124);
+}
+
+#div1 #head3{
+    margin-left: 600px;
+    margin-top: 150px;
+    font-size: 60px;
+    font-weight: bold;
+}
+#div1 #head3 #span1{
+    color: rgb(248, 248, 26);
+}
+#div1 #head3 #span2{
+    color: rgba(7, 182, 7, 0.634);
+}
+#div1 #head3 #span3{
+    color: lightpink;
+}
+#div1 #head3 #span4{
+   color: rgba(69, 69, 246, 0.722);
+}
