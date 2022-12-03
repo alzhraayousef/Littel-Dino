@@ -1,0 +1,22 @@
+body{
+    margin: 0%;
+}
+#gameDiv{
+    background: linear-gradient( rgb(166, 200, 248) , rgb(67, 163, 67));
+    padding: 10px;
+    margin-left: 10%;
+}
+#cloudIcon{
+    margin-right:20% ;
+    animation-name: cloud_move;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    box-shadow: 5px black;
+
+}
+@keyframes cloud_move{
+    from {transform: translate(0px,0px);}
+    to {transform: translate(20px,5px);}
+  }
