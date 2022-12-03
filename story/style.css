@@ -1,0 +1,50 @@
+body{
+    
+    background-color: rgb(255, 245, 247); 
+} 
+#contain{
+    display: flex;
+    padding: 40px;
+}
+/* story*/
+.images{
+    width: 240px;
+    height: 210px;
+    border-radius: 0px 40px 40px 0px;
+    transition: 1.5s;
+    margin-right: -30px;
+}
+.images:hover{
+    transform: scale(1.1);
+}
+.img-p{
+    display: flex;
+    margin-bottom: 40px;
+    cursor: pointer;
+    box-shadow: 1px 3px 10px gainsboro;
+    overflow: hidden;
+    border-radius:40px ;
+    transition: 1.5s;
+    background-color: white;
+    width: 500px;
+    float: right;
+}
+.img-p:hover{
+    transform: translate(20px,0px);
+}
+#stories{
+    float: right;
+    padding: 50px;
+    margin-top: -20px;
+}
+.h2-story{
+    margin-top: 50px;
+    width: 300px;
+    padding: 40px;
+}
+video{
+    float: left;
+    width: 750px;
+    height: 500px;
+    box-shadow: 1px 3px 10px gainsboro;
+}
