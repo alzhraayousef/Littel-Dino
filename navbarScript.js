@@ -1,4 +1,6 @@
-// Mouse effect
+
+try
+{
 document.body.addEventListener("mousemove", function (e) {
 
     var curX = e.clientX;
@@ -9,127 +11,66 @@ document.body.addEventListener("mousemove", function (e) {
 
 });
 
+}
+catch(mes){
+
+}
 
 // nav bar
 var navDiv = document.createElement("div");
 
 var logo = document.createElement("span");
-logo.innerHTML = "<img src='homeImages/logo.png' width='150px' height='65px'>";
+logo.innerHTML = "<a href='home.html'><img src='homeImages/logo.png' width='150px' height='65px'></a>";
 navDiv.appendChild(logo);
-logo.style = `position:relative; top:-18px; left:100px; `;
+logo.style = `position:relative; top:-18px; left:100px; cursor:pointer`;
 
 
 
-var navList = document.createElement("ul"); // big ul
-navList.setAttribute("class", "big");
+var navList = document.createElement("ul");
+navList.setAttribute("id","navList"); 
 
 var navElement = document.createElement("li");
+var navElementLink = document.createElement("a");
 var navElementContent = document.createTextNode("Home");
-navElement.appendChild(navElementContent);
+navElementLink.setAttribute("href","home.html");
+navElementLink.appendChild(navElementContent);
+navElement.appendChild(navElementLink);
 navList.appendChild(navElement);
 
 navElement = document.createElement("li");
-navElementContent = document.createTextNode("About");
-navElement.appendChild(navElementContent);
+navElementLink = document.createElement("a");
+navElementContent = document.createTextNode("Learning");
+navElementLink.setAttribute("href","Learning Page/home.html");
+navElementLink.appendChild(navElementContent);
+navElement.appendChild(navElementLink);
 navList.appendChild(navElement);
 
 navElement = document.createElement("li");
-navElement.setAttribute("id", "SmallList1");
-navElementContent = document.createTextNode("Learning +");
-navElement.appendChild(navElementContent);
+navElementLink = document.createElement("a");
+navElementContent = document.createTextNode("Gaming");
+navElementLink.setAttribute("href","gamesPages/gamesPage.html");
+navElementLink.appendChild(navElementContent);
+navElement.appendChild(navElementLink);
 navList.appendChild(navElement);
 
 navElement = document.createElement("li");
-navElement.setAttribute("id", "SmallList2");
-navElementContent = document.createTextNode("Gaming +");
-navElement.appendChild(navElementContent);
+navElementLink = document.createElement("a");
+navElementContent = document.createTextNode("Story");
+navElementLink.setAttribute("href","story/stories.html");
+navElementLink.appendChild(navElementContent);
+navElement.appendChild(navElementLink);
 navList.appendChild(navElement);
 
 navElement = document.createElement("li");
+navElementLink = document.createElement("a");
 navElementContent = document.createTextNode("Contact");
-navElement.appendChild(navElementContent);
-navList.appendChild(navElement);
+navElementLink.setAttribute("href","contact/contact.html");
+navElementLink.appendChild(navElementContent);
+navElement.appendChild(navElementLink);navList.appendChild(navElement);
 
 
 navDiv.appendChild(navList);
 document.body.appendChild(navDiv);
-
-
-// Drop down in learning element and gaming element in navbar
-
-var dropdown, dropdownContent, link, linkContent;
-
-dropdown = document.querySelector("#SmallList1");
-dropdown.setAttribute("class", "dropdown");
-
-dropdownContent = document.createElement("div");
-dropdownContent.setAttribute("class", "dropdown-content");
-dropdown.appendChild(dropdownContent);
-
-link = document.createElement("a");
-link.setAttribute("href", "#");
-linkContent = document.createTextNode("Learning1");
-link.appendChild(linkContent);
-dropdownContent.appendChild(link);
-
-link = document.createElement("a");
-link.setAttribute("href", "#");
-linkContent = document.createTextNode("Learning2");
-link.appendChild(linkContent);
-dropdownContent.appendChild(link);
-
-link = document.createElement("a");
-link.setAttribute("href", "#");
-linkContent = document.createTextNode("Learning3");
-link.appendChild(linkContent);
-dropdownContent.appendChild(link);
-
-
-dropdown = document.querySelector("#SmallList2");
-dropdown.setAttribute("class", "dropdown");
-
-dropdownContent = document.createElement("div");
-dropdownContent.setAttribute("class", "dropdown-content");
-dropdown.appendChild(dropdownContent);
-
-link = document.createElement("a");
-link.setAttribute("href", "#");
-linkContent = document.createTextNode("Gaming1");
-link.appendChild(linkContent);
-dropdownContent.appendChild(link);
-
-link = document.createElement("a");
-link.setAttribute("href", "#");
-linkContent = document.createTextNode("Gaming2");
-link.appendChild(linkContent);
-dropdownContent.appendChild(link);
-
-link = document.createElement("a");
-link.setAttribute("href", "#");
-linkContent = document.createTextNode("Gaming3");
-link.appendChild(linkContent);
-dropdownContent.appendChild(link);
-
-
-
-// control indicator in dropdown links case
-var links = document.getElementsByTagName("a");
-var flag = true;
-for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener("mouseover", function () {
-        flag = false;
-    });
-    links[i].addEventListener("click", function () {
-        flag = false;
-    });
-}
-document.querySelector("#SmallList1").addEventListener("mouseout", function () {
-    flag = true;
-});
-document.querySelector("#SmallList2").addEventListener("mouseout", function () {
-    flag = true;
-});
-
 
 
 // put style and events
@@ -141,41 +82,19 @@ navDiv.style = `position:fixed; top:-16px; left:0px;
 navList.style = `position:relative; top:-75px; left:450px; `;
 
 var offsetL, offsetW;
-var navElements = document.querySelectorAll(".big>li");
+var navElements = document.querySelectorAll("li");
 for (var index = 0; index < navElements.length; index++) {
     navElements[index].style = `display:inline; margin-right:80px; font-size:15px; color:rgb(14, 14, 100);
-                               font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;`;
+                               font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold; cursor:pointer`;
     navElements[index].addEventListener("mouseover", function (e) {
-        if (flag == true) {
             indicator(e.target);
-        }
-        else {
-            if (e.target.textContent.indexOf("Learning") != -1) {
-                indicator2();
-            }
-            else {
-                indicator3();
-            }
-        }
-
     });
 
     navElements[index].addEventListener("click", function (e) {
-        if (flag == true) {
             offsetL = e.target.offsetLeft;
             offsetW = e.target.offsetWidth;
             indicator(e.target);
-
-        }
-        else {
-            if (e.target.textContent.indexOf("Learning") != -1) {
-                indicator2();
-            }
-            else {
-                indicator3();
-            }
-        }
-
+            
     });
 }
 
@@ -202,15 +121,6 @@ function indicator(e) {
 function saveIndicatorOnActive(L, W) {
     marker.style.left = L + "px";
     marker.style.width = W + "px";
-}
-// for Learning + drop down links
-function indicator2() { 
-    marker.style.left = 289 + "px";
-    marker.style.width = 110 + "px";
-}
-function indicator3() {
-    marker.style.left = 461 + "px";
-    marker.style.width = 101 + "px";
 }
 
 
