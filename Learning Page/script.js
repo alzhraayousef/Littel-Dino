@@ -6,7 +6,7 @@ var quizDiv=document.createElement("div");
 quizDiv.setAttribute("id","quizDiv");
 
 var linkquizpage=document.createElement("a");
-//linkquizpage.setAttribute("href","")
+linkquizpage.setAttribute("href","Quiz/quizPage.html")
 var quizImg=document.createElement("img");
 quizImg.setAttribute("id","quizImg");
 quizImg.setAttribute("src","LearningImgs/quiz_img.jpg")
