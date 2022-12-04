@@ -3,7 +3,7 @@ var mainDiv=document.createElement("div")
 var stop_interval
 document.getElementById("body").appendChild(mainDiv)
 
-function contentDivElements(div,h1,p){
+function contentDivElements(div,h1,p,divid){
    
     var heading=document.createElement("h1")
     heading.textContent=h1
@@ -18,13 +18,13 @@ function contentDivElements(div,h1,p){
     butt.setAttribute("id","contentDiv-button")
     butt.textContent="Explore"
     butt.addEventListener("click",function(){
-        window.location.href="#region" ;
+        window.location.href="#"+divid ;
 
 
     })
     div.appendChild(butt)    
 }
-function createMainDiv(backgroundColor,h1,para,imgsrc){
+function createMainDiv(backgroundColor,h1,para,imgsrc,divid){
     mainDiv.innerHTML=" "
     mainDiv.setAttribute("id", "mainDiv")
     mainDiv.style.backgroundColor=backgroundColor;
@@ -55,7 +55,7 @@ function createMainDiv(backgroundColor,h1,para,imgsrc){
     var contentDiv=document.createElement("div")
     contentDiv.setAttribute("id","contentDiv")
 
-    contentDivElements(contentDiv,h1,para)
+    contentDivElements(contentDiv,h1,para,divid)
     mainDiv.appendChild(contentDiv)
     var imgContainerDiv=document.createElement("div")
     imgContainerDiv.setAttribute("id","imgContainerDiv")
@@ -104,17 +104,17 @@ function changeDiv(){
     if(divPointer==0){
       
 
-        createMainDiv("#faf5e1","Learning","Learn and discover more","homeImages/baby-2.png")
+        createMainDiv("#faf5e1","Learning","Learn and discover more","homeImages/baby-2.png","learning")
     }
     else if(divPointer==1){
         
        
-        createMainDiv("#e1fae6","Story","Listen to interesting stories","homeImages/banner-2.png") 
+        createMainDiv("#e1fae6","Story","Listen to interesting stories","homeImages/banner-2.png","story") 
         
     }
     else if(divPointer==2){
         
-        createMainDiv("#d1f7f9","Fun & Playing","Fun and play with different Games","homeImages/banner-5.png")
+        createMainDiv("#d1f7f9","Fun & Playing","Fun and play with different Games","homeImages/banner-5.png","game")
     }
 
 
@@ -166,7 +166,6 @@ star1.style.marginTop='200px'
 var star1=document.createElement("img");
 star1.setAttribute("src","homeImages/star1.png");
 star1.setAttribute("class","star");
-
 content.appendChild(star1);
 star1.style.marginLeft='700px'
 star1.style.marginTop='5px'
@@ -188,18 +187,20 @@ document.body.appendChild(content);
 console.log(content)
 //div text
 text.setAttribute("class","text");
+text.setAttribute("id","learning");
 content.appendChild(text);
+
 //h2
-head2.textContent="Play Cafe";
+head2.textContent="Learning";
 text.appendChild(head2);
 //p
-parag1.textContent="All fun and play — that's the motto of Tediss. The joyous theme brings lively atmosphere to your website and helps you build a beautiful play cafe."
+parag1.textContent="Teaching children letters, words, mathematical operations and quizzes to develop their skills"
 text.appendChild(parag1);
 //a -> button
 link1.setAttribute("href","#");
 link1.setAttribute("onmouseover","changeBackgroundColor(this)");
 link1.setAttribute("onmouseleave","resetBackgroundColor(this)");
-link1.textContent="Game";
+link1.textContent="Go";
 text.appendChild(link1);
 // div image
 div_Images.setAttribute("class","image");
@@ -253,20 +254,21 @@ console.log(555555) */
 
 //div text
 text.setAttribute("class","text");
+text.setAttribute("id","game");
 content.appendChild(text);
 text.style.marginRight='800px';
 //h2
-head2.textContent="Parties & Events";
+head2.textContent="Fun & Playing";
 text.appendChild(head2);
 //p
-parag1.textContent="Organize parties and events with ease! Tediss provides you with the built-in Events Calendar plugin, which makes organizing events a breeze."
+parag1.textContent="Fun games that help develop intelligence, develop their thinking, and help them think quickly"
 text.appendChild(parag1);
 
 //a -> button
 link1.setAttribute("href","#");
 link1.setAttribute("onmouseover","changeBackgroundColor(this)");
 link1.setAttribute("onmouseleave","resetBackgroundColor(this)");
-link1.textContent="Game";
+link1.textContent="Go";
 text.appendChild(link1);
 // div image
 div_Images.setAttribute("class","image");
@@ -303,26 +305,27 @@ content.setAttribute("onscroll","increaseOpacity(this)");
 document.body.appendChild(content);
 //div text
 text.setAttribute("class","text");
+text.setAttribute("id","story");
 content.appendChild(text);
 text.style.marginRight='100px';
 //h2
-head2.textContent="Childcare Center";
+head2.textContent="Story";
 text.appendChild(head2);
 //p
-parag1.textContent="Organize parties and events with ease! Tediss provides you with the built-in Events Calendar plugin, which makes organizing events a breeze."
+parag1.textContent="Short stories for kids have interesting characters, memorable themes, and teach important lessons"
 text.appendChild(parag1);
 
 //a -> button
 link1.setAttribute("href","#");
 link1.setAttribute("onmouseover","changeBackgroundColor(this)");
 link1.setAttribute("onmouseleave","resetBackgroundColor(this)");
-link1.textContent="Game";
+link1.textContent="Go";
 text.appendChild(link1);
 // div image
 div_Images.setAttribute("class","image");
 content.appendChild(div_Images);
 // image2
-img1.setAttribute("src","homeImages/image3.jpg");
+img1.setAttribute("src","homeImages/story1.png");
 img1.setAttribute("alt","Images");
 img1.setAttribute("class","img1");
 div_Images.appendChild(img1);
@@ -341,47 +344,10 @@ function changeBackgroundColor(link){
 function resetBackgroundColor(link){
     link.style.backgroundColor="rgb(244, 150, 166)"
 }
+//###########################################################
 
 
-/*  function increaseOpacity(op){
-    console.log(op.style.opacity)
-    setInterval(function(){
-        if(op.style.opacity==1){
-        op.style.opacity -= "0.1";
-        console.log(op.style.opacity)
-        }
-    }, 50);
-    console.log(op.style.opacity)
-} */
 
-
-/*  function visible(){
-    setTimeout(() => {
-        var txt=document.getElementsByClassName("text");
-        var img1=document.getElementsByClassName("img1");
-        for(var i=0;i<txt.length;i++){
-        txt[i].style.visibility="visible";
-        txt[i].style.transition="0.8s";
-        }
-        for(var i=0;i<txt.length;i++){
-        img1[i].style.visibility="visible";
-        img1[i].style.transition="0.8s";
-        }
-        
-    }, 100);
-
-   
-} */
-
-/* function moveRight(){
-    var img=document.getElementById("img1");
-   img.style.visibility="visible";
-   setInterval( function () {
-   img.style.left = parseInt(img.style.left) + 5 + 'px'; 
-    },50)
-} */
-
-var stop_interval=setInterval(changeDiv,3000)
 
 
           

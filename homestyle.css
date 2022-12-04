@@ -108,12 +108,27 @@
     font-size: large;
 }
 
-
+/* code hager */
 .content{
+    position: relative;
     margin-top: 100px;
     display: flex;
     opacity: 1;
+    animation-name: moveLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
+@keyframes moveLeft{
+    from{
+      right: 0px;
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+      right: 80px;
+    }
+   
+  }
 
 .content .text a{
    padding: 15px 60px;
