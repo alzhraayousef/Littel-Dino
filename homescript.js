@@ -1,6 +1,6 @@
 var divPointer=0
-var time=0
 var mainDiv=document.createElement("div")
+var stop_interval
 document.getElementById("body").appendChild(mainDiv)
 
 function contentDivElements(div,h1,p){
@@ -13,6 +13,16 @@ function contentDivElements(div,h1,p){
     para.setAttribute("id","contentDiv-p")
     para.textContent=p
     div.appendChild(para)    
+
+    var butt=document.createElement("button")
+    butt.setAttribute("id","contentDiv-button")
+    butt.textContent="Explore"
+    butt.addEventListener("click",function(){
+        window.location.href="#region" ;
+
+
+    })
+    div.appendChild(butt)    
 }
 function createMainDiv(backgroundColor,h1,para,imgsrc){
     mainDiv.innerHTML=" "
@@ -25,28 +35,17 @@ function createMainDiv(backgroundColor,h1,para,imgsrc){
     backicon.setAttribute("class","fas fa-angle-left")
     backButton.appendChild(backicon)
     backButton.addEventListener("click",function(){
-       /* if(divPointer!=0){
+
+        if(divPointer==0){
             divPointer=2
-            console.log(" if 0",divPointer)
         }
         else{
-            divPointer=divPointer-1
-            console.log("else",divPointer)
+            divPointer-=1
+          }
 
-        }
-        */
-        var check=divPointer-1
+         
+          changeDiv()
 
-      console.log("check: "+check)
-       if(check==0){
-         divPointer=2
-         changeDiv()
-       }
-       else{
-         divPointer-=1
-         changeDiv()
-       }
-       
     });
     mainDiv.appendChild(backButton)
 
@@ -70,16 +69,21 @@ function createMainDiv(backgroundColor,h1,para,imgsrc){
     var nextButton=document.createElement("button")
     nextButton.setAttribute("id","nextButton")
     nextButton.addEventListener("click",function(){
+
+
         if(divPointer==2){
             divPointer=0
+           
         }
         else{
             divPointer+=1
-            console.log("in next button "+divPointer)
+            
 
         }
-        console.log("in next button "+divPointer)
         changeDiv()
+
+
+        
     });
     mainDiv.appendChild(nextButton)
     
@@ -94,27 +98,22 @@ function createMainDiv(backgroundColor,h1,para,imgsrc){
 
 function changeDiv(){
 
+
     var currentDiv=document.getElementById("mainDiv")
     console.log("in chang div",divPointer)
     if(divPointer==0){
-        console.log(" in slide 0",divPointer)
       
-        divPointer=divPointer+1;        
 
         createMainDiv("#faf5e1","Learning","Learn and discover more","homeImages/baby-2.png")
     }
     else if(divPointer==1){
-        console.log(" in slide 1",divPointer)
         
        
-        divPointer=divPointer+1
         createMainDiv("#e1fae6","Story","Listen to interesting stories","homeImages/banner-2.png") 
         
     }
     else if(divPointer==2){
-        console.log(" in slide 2",divPointer)
         
-        divPointer=0
         createMainDiv("#d1f7f9","Fun & Playing","Fun and play with different Games","homeImages/banner-5.png")
     }
 
@@ -123,7 +122,25 @@ function changeDiv(){
 
 }
 
+
+function start_interval(time){
+    stop_interval=setInterval(function(){
+
+        if(divPointer==2){
+            changeDiv()
+            divPointer=0
+    
+        }
+        else{
+            changeDiv()
+            divPointer+=1
+        }
+       
+    },time)
+}
 changeDiv()
+start_interval(3000)
+
 
 
 // hager code
@@ -149,6 +166,7 @@ star1.style.marginTop='200px'
 var star1=document.createElement("img");
 star1.setAttribute("src","homeImages/star1.png");
 star1.setAttribute("class","star");
+
 content.appendChild(star1);
 star1.style.marginLeft='700px'
 star1.style.marginTop='5px'

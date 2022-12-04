@@ -38,7 +38,11 @@
     line-height: 60px;
     font-family: 'M PLUS Rounded 1c', sans-serif ;
     font-weight: 800;
-    text-shadow: 5px 6px 0 #e0d0ec;
+    text-shadow: 5px 6px 0 #d4bfe3;
+    animation-name: animopacity;
+    animation-duration: 4s;
+    animation-direction: alternate; 
+    animation-iteration-count:1;
     
 }
 #contentDiv-p{   
@@ -47,25 +51,63 @@
     font-weight: 400px;
     color:#253b70;
     font-family: 'Open Sans', sans-serif;
+    animation-name: animopacity;
+    animation-duration: 4s;
+    animation-direction: alternate; 
+
+    animation-iteration-count:1;
+}
+#contentDiv-button{
+    background-color:#d4bfe3;
+    color:white;
+    width:200px;
+    height:50px;
+    border: none;
+    font-size: 20px;
+    border-radius: 25px;
+    animation-name: animopacity;
+    animation-duration: 4s;
+    animation-direction: alternate; 
+    animation-iteration-count:1;
+
+}
+#contentDiv-button:hover{
+    border: 1px solid #253b70;
+    cursor: pointer;
+}
+@keyframes animopacity{
+    0% {opacity: 0; transform: scale(0.9);}
+    50%{opacity: 1;transform: scale(1);}
+    
 }
 #backButton,#nextButton{
     width: 50px;
     height: 50px;
     margin-top: 20%;
-    border: 1px  solid crimson;
+    border: none;
     border-radius: 50%;
     cursor: pointer;
 }
 #backButton{
    margin-left: 2% ;
+   color: gainsboro;
 }
 #nextButton{
     margin-right: 2%;
+    color: gainsboro;
 
 }
+#backButton:hover,#nextButton:hover{
+    border: 1px  dashed #253b70;
+    transform: scale(1.5,1.5);
+    color: #253b70;
+
+}
+
 #nextIcon,#backIcon{
     font-size: large;
 }
+
 
 .content{
     margin-top: 100px;
