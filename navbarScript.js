@@ -48,7 +48,7 @@ navList.appendChild(navElement);
 navElement = document.createElement("li");
 navElementLink = document.createElement("a");
 navElementContent = document.createTextNode("Gaming");
-navElementLink.setAttribute("href","gamesPages/gamesPage.html");
+navElementLink.setAttribute("href","games page/gamesPage.html");
 navElementLink.appendChild(navElementContent);
 navElement.appendChild(navElementLink);
 navList.appendChild(navElement);
