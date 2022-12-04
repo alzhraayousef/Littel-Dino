@@ -1,4 +1,4 @@
-var SumProcessDiv=document.createElement("div")
+    var SumProcessDiv=document.createElement("div")
     SumProcessDiv.setAttribute("id","SumProcessDiv")
 
     document.body.appendChild(SumProcessDiv);
