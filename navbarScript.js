@@ -40,7 +40,7 @@ navList.appendChild(navElement);
 navElement = document.createElement("li");
 navElementLink = document.createElement("a");
 navElementContent = document.createTextNode("Learning");
-navElementLink.setAttribute("href","Learning Page/home.html");
+navElementLink.setAttribute("href","learningPage/home.html");
 navElementLink.appendChild(navElementContent);
 navElement.appendChild(navElementLink);
 navList.appendChild(navElement);

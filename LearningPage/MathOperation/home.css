@@ -1,0 +1,60 @@
+body
+{
+    margin: 0px;
+}
+#startDiv
+{
+    width: 150px;
+    padding: 20px;
+    border-radius: 50%;
+    height: 70px;
+    margin-top: 20%;
+    margin-left: 44%;
+    background-color: rgb(244, 150, 166);
+}
+#startDiv:hover
+{
+    transform: scale(.7,.7);
+}
+#startbtn
+{
+    font-family: 'Luckiest Guy', cursive;
+    margin-left: 15px;
+    
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+#containerDiv
+{
+    font-family: 'Luckiest Guy', cursive;
+    height: 753px;
+    background-color: rgb(244, 150, 166);
+  
+}
+#optionDiv
+{
+    width: 40%;
+    margin-left: 42%;
+    padding-top: 7%;
+    font-size: xx-large;
+}
+#optionAdd,#optionSub,#optionMulti,#optionDivid
+{
+    background-color:   rgb(244, 150, 166);
+    color: white;
+    width: 35%;
+    height: 70px;
+    padding-top: 7%;
+    margin-top: 3%;
+    border-radius: 60%;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+#optionAdd:hover,#optionSub:hover,#optionMulti:hover,#optionDivid:hover
+{
+    background-color: white;
+    color: rgb(244, 150, 166);
+}
