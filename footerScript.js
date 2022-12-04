@@ -37,6 +37,7 @@ var twitter_icon=document.createElement("img")
 twitter_icon.setAttribute("src","homeImages/twitter_icon.png")
 twitter_icon.setAttribute("class","icons")
 twitter_icon.setAttribute("onmouseover","changeIcon(this)")
+twitter_icon.setAttribute("onmouseleave","returnIcon(this)")
 iconImages.appendChild(twitter_icon);
 
 
@@ -44,20 +45,17 @@ var facebook_icon=document.createElement("img")
 facebook_icon.setAttribute("src","homeImages/facebook_icon.png")
 facebook_icon.setAttribute("class","icons")
 facebook_icon.setAttribute("onmouseover","changeIcon(this)")
+facebook_icon.setAttribute("onmouseleave","returnIcon(this)")
 iconImages.appendChild(facebook_icon)
 
 var pinterest_icon=document.createElement("img")
 pinterest_icon.setAttribute("src","homeImages/pinterest_icon.png")
 pinterest_icon.setAttribute("class","icons")
 pinterest_icon.setAttribute("onmouseover","changeIcon(this)")
+pinterest_icon.setAttribute("onmouseleave","returnIcon(this)")
 iconImages.appendChild(pinterest_icon)
 
 dinosaur_div.appendChild(iconImages)
-
-var float_div=document.createElement("div")
-float_div.setAttribute("id","float")
-iconImages.appendChild(float_div)
-
 
 var OurContacts_div=document.createElement("div")
 OurContacts_div.setAttribute("id","OurContacts_div")
@@ -66,7 +64,8 @@ var head_Contacts=document.createElement("h2")
 head_Contacts.textContent="Our Contacts";
 OurContacts_div.appendChild(head_Contacts)
 
-
+var locationDiv=document.createElement("div");
+locationDiv.setAttribute("id","locationDiv")
 var Our_Contacts_imgs=document.createElement("div")
 Our_Contacts_imgs.setAttribute("class","Our_Contacts_imgs")
 
@@ -74,9 +73,8 @@ var location_icon=document.createElement("img")
 location_icon.setAttribute("src","homeImages/location_icon.png")
 location_icon.setAttribute("class","imgs")
 Our_Contacts_imgs.appendChild(location_icon)
-
-OurContacts_div.appendChild(Our_Contacts_imgs)
-
+locationDiv.appendChild(Our_Contacts_imgs)
+OurContacts_div.appendChild(locationDiv)
 
 
 var Our_Contacts_data=document.createElement("div")
@@ -85,43 +83,49 @@ var Contacts_para=document.createElement("p")
 Contacts_para.innerHTML="27 Division St, New York,<br> NY 10002, USA";
 
 Our_Contacts_data.appendChild(Contacts_para)
-OurContacts_div.appendChild(Our_Contacts_data)
+locationDiv.appendChild(Our_Contacts_data)
+OurContacts_div.appendChild(locationDiv)
 
-//OurContacts_div.appendChild(float_div)
+
 float_div=document.createElement("div")
 float_div.setAttribute("id","float")
 OurContacts_div.appendChild(float_div)
 
 
+var teleDiv=document.createElement("div");
+teleDiv.setAttribute("id","teleDiv")
 Our_Contacts_imgs=document.createElement("div")
 Our_Contacts_imgs.setAttribute("class","Our_Contacts_imgs")
 var telephone_icon=document.createElement("img")
 telephone_icon.setAttribute("src","homeImages/telephone_icon.png")
 telephone_icon.setAttribute("class","imgs")
 Our_Contacts_imgs.appendChild(telephone_icon)
-OurContacts_div.appendChild(Our_Contacts_imgs)
+teleDiv.appendChild(Our_Contacts_imgs)
+OurContacts_div.appendChild(teleDiv)
 
- Our_Contacts_data=document.createElement("div")
+Our_Contacts_data=document.createElement("div")
 Our_Contacts_data.setAttribute("class","Our_Contacts_data")
- Contacts_para=document.createElement("p")
-Contacts_para.innerHTML="+1 (888) 561 795 1<br>+1 (888) 561 795 2"
+Contacts_para=document.createElement("p")
+Contacts_para.innerHTML="+1 (888) 561 795 1<br> +1 (888) 561 795 2"
 
 Our_Contacts_data.appendChild(Contacts_para)
-OurContacts_div.appendChild(Our_Contacts_data);
+teleDiv.appendChild(Our_Contacts_data)
+OurContacts_div.appendChild(teleDiv)
 
-//OurContacts_div.appendChild(float_div)
 float_div=document.createElement("div")
 float_div.setAttribute("id","float")
 OurContacts_div.appendChild(float_div)
 
-
+var mailDiv=document.createElement("div");
+mailDiv.setAttribute("id","mailDiv")
 Our_Contacts_imgs=document.createElement("div")
 Our_Contacts_imgs.setAttribute("class","Our_Contacts_imgs")
 var mail_icon=document.createElement("img")
 mail_icon.setAttribute("src","homeImages/mail_icon.png")
 mail_icon.setAttribute("class","imgs")
 Our_Contacts_imgs.appendChild(mail_icon)
-OurContacts_div.appendChild(Our_Contacts_imgs)
+mailDiv.appendChild(Our_Contacts_imgs)
+OurContacts_div.appendChild(mailDiv)
 
 Our_Contacts_data=document.createElement("div")
 Our_Contacts_data.setAttribute("class","Our_Contacts_data")
@@ -129,7 +133,8 @@ Contacts_para=document.createElement("p")
 Contacts_para.innerHTML="littledino@wgl.com<br>dinoino@mail.com"
 
 Our_Contacts_data.appendChild(Contacts_para)
-OurContacts_div.appendChild(Our_Contacts_data)
+mailDiv.appendChild(Our_Contacts_data)
+OurContacts_div.appendChild(mailDiv)
 
 float_div=document.createElement("div")
 float_div.setAttribute("id","float")
@@ -139,12 +144,11 @@ OurContacts_div.appendChild(float_div)
 footer.appendChild(OurContacts_div)
 
 
-
-
 var OurGallery_div=document.createElement("div")
 OurGallery_div.setAttribute("id","OurGallery_div")
 
 var head2=document.createElement("h2")
+head2.setAttribute("id","headgalary")
 head2.textContent="Our Gallery"
 OurGallery_div.appendChild(head2)
 
@@ -191,16 +195,16 @@ lastThreeImg.appendChild(gallery_06)
 
 OurGallery_div.appendChild(lastThreeImg)
 
+footer.appendChild(OurGallery_div)
+
 float_div=document.createElement("div")
 float_div.setAttribute("id","float")
 OurGallery_div.appendChild(float_div)
 
-
-footer.appendChild(OurGallery_div)
-
 var Open_Hours_div=document.createElement("div")
 Open_Hours_div.setAttribute("id","Open_Hours_div")
 var head2=document.createElement("h2")
+head2.setAttribute("id","head2")
 head2.textContent="Open Hours"
 Open_Hours_div.appendChild(head2)
 
@@ -223,6 +227,5 @@ function changeIcon(icon){
         icon.style.opacity=0.8;
 }
 function returnIcon(icon){
-    icon.style.opacity=0.8;
+    icon.style.opacity=1;
 }
-
