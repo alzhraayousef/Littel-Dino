@@ -108,6 +108,9 @@
     font-size: large;
 }
 
+
+
+
 /* code hager */
 .content{
     position: relative;
@@ -138,6 +141,41 @@
    border-radius: 30px;
    font-size: 25px;
    font-weight: bold;
+}
+
+.text{
+    width: 450px;
+    right: 0px;
+    position: absolute; 
+    margin-right: 100px;
+}
+.image img{
+   margin-left: 150px;
+   width: 45%;
+  position: absolute;
+   left: 0px;
+   margin-top: 0px;
+}
+.text h2{
+    font-size: 50px;
+    margin-left:0px;
+    color: black;
+    width: 400px;
+}
+.text p{
+    font-size: 23px;
+    margin-top: -10px;
+    color: rgb(135, 132, 132);
+    line-height: 33px;
+    margin-bottom: 50px;
+} 
+.star{
+    width: 30px;
+    height: 30px;
+}
+.star2{
+    width: 60px;
+    height: 60px;
 }
 
 .text{

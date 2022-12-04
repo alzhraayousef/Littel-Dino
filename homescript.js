@@ -212,12 +212,7 @@ img1.setAttribute("class","img1");
 div_Images.appendChild(img1);
 
 document.write("<br>");
-document.write("<br>");
-document.write("<br>");
-document.write("<br>");
-document.write("<br>");
-document.write("<br>");
-document.write("<br>");
+
 
 
 //part2
@@ -308,6 +303,7 @@ text.setAttribute("class","text");
 text.setAttribute("id","story");
 content.appendChild(text);
 text.style.marginRight='100px';
+text.style.marginTop='-90px'
 //h2
 head2.textContent="Story";
 text.appendChild(head2);
@@ -330,7 +326,9 @@ img1.setAttribute("alt","Images");
 img1.setAttribute("class","img1");
 div_Images.appendChild(img1);
 img1.style.marginLeft='100px';
-
+img1.style.width='600px';
+img1.style.marginTop='-110px';
+img1.style.marginLeft='150px'
 document.write("<br>");
 
 
