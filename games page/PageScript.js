@@ -70,9 +70,10 @@ function gamesParent(){
     gamesParent.style.display="flex"
 
     
-    var MatchPaper=gameDiv("#faf5e1","MATCH PAPER","fa-solid fa-equals")
-    gamesParent.appendChild(MatchPaper)
-    MatchPaper.addEventListener("click",function(){
+    var Memory_game=gameDiv("#faf5e1","Memory game","fa-solid fa-equals")
+    gamesParent.appendChild(Memory_game)
+    Memory_game.addEventListener("click",function(){
+        open("Memory-game/start.html","_self")
 
     })
     
@@ -86,6 +87,8 @@ function gamesParent(){
     var RPS=gameDiv("rgb(226, 205, 244)","Rock Paper Scissors","fa-solid fa-dice")
     gamesParent.appendChild(RPS)
     RPS.addEventListener("click",function(){
+        open("RockPaper/rockpaperPage.html","_self")
+
         
     })
     document.body.appendChild(gamesParent)
@@ -110,9 +113,11 @@ function gamesParent(){
         
     })
    
-    var KidsMath=gameDiv("#e1fae6","Kids Math","fa-solid fa-plus-minus")
-    QuizGames.appendChild(KidsMath)
-    KidsMath.addEventListener("click",function(){
+    var Guess_color=gameDiv("#e1fae6","Guess Color","fa-solid fa-palette")
+    QuizGames.appendChild(Guess_color)
+    Guess_color.addEventListener("click",function(){
+        open("GuessColor/Guesscolor.html","_self")
+
         
         
     })
@@ -120,6 +125,7 @@ function gamesParent(){
     var GussNumber=gameDiv("rgb(226, 205, 244)","Guss Number","fa-solid fa-question")
     QuizGames.appendChild(GussNumber)
     GussNumber.addEventListener("click",function(){
+        open("Gussnumber/gussNumberPage.html","_self")
         
     })
 
