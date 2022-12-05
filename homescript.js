@@ -122,24 +122,22 @@ function changeDiv(){
 
 }
 
-
-function start_interval(time){
-    stop_interval=setInterval(function(){
+changeDiv()
+stop_interval=setInterval(function(){
 
         if(divPointer==2){
-            changeDiv()
             divPointer=0
+            changeDiv()
+
     
         }
         else{
-            changeDiv()
             divPointer+=1
+            changeDiv()
+
         }
        
-    },time)
-}
-changeDiv()
-start_interval(3000)
+    },6000)
 
 
 
@@ -187,11 +185,12 @@ document.body.appendChild(content);
 console.log(content)
 //div text
 text.setAttribute("class","text");
-text.setAttribute("id","learning");
 content.appendChild(text);
 
 //h2
 head2.textContent="Learning";
+head2.setAttribute("id","learning");
+
 text.appendChild(head2);
 //p
 parag1.textContent="Teaching children letters, words, mathematical operations and quizzes to develop their skills"
@@ -249,11 +248,11 @@ console.log(555555) */
 
 //div text
 text.setAttribute("class","text");
-text.setAttribute("id","game");
 content.appendChild(text);
 text.style.marginRight='800px';
 //h2
 head2.textContent="Fun & Playing";
+head2.setAttribute("id","game");
 text.appendChild(head2);
 //p
 parag1.textContent="Fun games that help develop intelligence, develop their thinking, and help them think quickly"
@@ -300,16 +299,19 @@ content.setAttribute("onscroll","increaseOpacity(this)");
 document.body.appendChild(content);
 //div text
 text.setAttribute("class","text");
-text.setAttribute("id","story");
 content.appendChild(text);
 text.style.marginRight='100px';
 text.style.marginTop='-90px'
 //h2
 head2.textContent="Story";
+head2.setAttribute("id","story");
+
 text.appendChild(head2);
 //p
 parag1.textContent="Short stories for kids have interesting characters, memorable themes, and teach important lessons"
+
 text.appendChild(parag1);
+
 
 //a -> button
 link1.setAttribute("href","story/stories.html");

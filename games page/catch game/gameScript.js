@@ -1,5 +1,4 @@
-var img
-var positions=["translate(20px, 100px)","translate(210px, 100px)","translate(390px, 100px)","translate(580px, 100px)","translate(780px, 100px)"]
+var positions=["translate(20px, 100px)","translate(210px, 100px)","translate(390px, 100px)","translate(-170px, 100px)","translate(-370px, 100px)"]
 var lastRandom
 var winner_audio=document.createElement("audio")
 winner_audio.setAttribute("src","sounds/wiin.mp3")
@@ -7,13 +6,13 @@ var Stop_interval
 var treeDiv
 function game()
 {
-    document.body.innerHTML=""
+    document.getElementById("gamediv").innerHTML=""
     var gameDiv=document.createElement("div")
     gameDiv.setAttribute("id","gameDiv")  
     gameDiv.style.width="1000px"
     gameDiv.style.height="600px"
-    document.body.appendChild(gameDiv)
-    doraaStyle()
+    document.getElementById("gamediv").style.paddingTop="0px"
+    var doraa= doraaStyle()
     var cloudDiv=document.createElement("div")
     cloudDiv.style.display="flex"
     treeDiv=document.createElement("div")
@@ -23,7 +22,7 @@ function game()
        var cloud=cloudStyle()
         cloudDiv.appendChild(cloud)
     }
-   img.style.display="none"
+   doraa.style.display="none"
 
 
     for(var i=0;i<5;i++){
@@ -31,8 +30,11 @@ function game()
         treeDiv.appendChild(tree)
     }
     gameDiv.appendChild(cloudDiv)
-    gameDiv.appendChild(img)
+    gameDiv.appendChild(doraa)
     gameDiv.appendChild(treeDiv)
+    document.getElementById("gamediv").appendChild(gameDiv)
+    document.body.style.background="linear-gradient(rgb(166, 200, 248) , rgb(67, 163, 67))"
+
 
     
 
@@ -44,7 +46,7 @@ function cloudStyle(){
     cloud.style.fontSize="150px"
     cloud.style.color="white"
 
-    cloud.style.zIndex="2"
+    cloud.style.zIndex="0"
     return cloud
     
 
@@ -57,7 +59,7 @@ function treeStyle(){
     tree.style.width="200px"
     tree.style.height="300px"
     
-    tree.style.zIndex="2"
+    tree.style.zIndex="0"
     return tree
 
 }
@@ -66,20 +68,20 @@ function stopImg(){
 
 }
 function doraaStyle(){
-    img=document.createElement("img")
+   var img=document.createElement("img")
     img.setAttribute("src","doraa.png")
     img.setAttribute("id","doraaImg")
     img.style.width="150px"
     img.style.height="150px"
-    img.style.zIndex="1"
+    img.style.zIndex="-1"
     img.style.cursor="pointer"
     img.addEventListener("click",function(event){
        
         stopImg()
         winner_audio.play()
-        var choose=confirm("are you want to restart game")
-        console.log(choose)
+        
     })
+    return img
     
    
 }
@@ -93,10 +95,10 @@ function changePosition(){
     
         console.log(positions[randomValue]);
     
-        img.style.transform=positions[randomValue];
+        document.getElementById("doraaImg").style.transform=positions[randomValue];
         treeDiv.style.marginTop="0%"
     
-        img.style.display="inline"
+        document.getElementById("doraaImg").style.display="inline"
     
     
     },500) 
@@ -147,7 +149,18 @@ function gameLoad(){
 
 
     gamediv.appendChild(StartButn)
-    
+    StartButn.addEventListener("mouseover",function(){
+        StartButn.style.backgroundColor="#253b70"
+        StartButn.style.transform="scale(1.1,1.1)"
+        
+        
+    })
+    StartButn.addEventListener("mouseleave",function(){
+        StartButn.style.backgroundColor="pink"
+        StartButn.style.transform="scale(1,1)"
+        
+        
+    })
 
     document.body.appendChild(gamediv)
     StartButn.addEventListener("click",function(){

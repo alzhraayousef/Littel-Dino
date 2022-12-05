@@ -3,11 +3,17 @@ try
 {
 document.body.addEventListener("mousemove", function (e) {
 
+
     var curX = e.clientX;
     var curY = e.clientY;
+  try{
+      document.querySelector('.mouse').style.left = curX + 'px';
+      document.querySelector('.mouse').style.top = curY + 'px';
+    }
+   catch{
 
-    document.querySelector('.mouse').style.left = curX + 'px';
-    document.querySelector('.mouse').style.top = curY + 'px';
+   }
+   
 
 });
 

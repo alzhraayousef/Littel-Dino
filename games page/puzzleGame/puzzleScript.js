@@ -220,6 +220,18 @@ function gameLoad(){
 
 
     gamediv.appendChild(StartButn)
+    StartButn.addEventListener("mouseover",function(){
+        StartButn.style.backgroundColor="#253b70"
+        StartButn.style.transform="scale(1.1,1.1)"
+        
+        
+    })
+    StartButn.addEventListener("mouseleave",function(){
+        StartButn.style.backgroundColor="pink"
+        StartButn.style.transform="scale(1,1)"
+        
+        
+    })
     
 
     document.body.appendChild(gamediv)
@@ -244,7 +256,9 @@ function onClickChoosePuzzle(id,src){
 
        originalImage.setAttribute("src",src)
         originalImage.style.width="200px"  
-        originalImage.style.height="200px"  
+        originalImage.style.height="200px" 
+        originalImage.style.border="1px solid lightblue"  
+
        document.getElementById("gameDiv").appendChild(originalImage)
 
 }
