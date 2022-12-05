@@ -61,6 +61,7 @@ var OurContacts_div=document.createElement("div")
 OurContacts_div.setAttribute("id","OurContacts_div")
 
 var head_Contacts=document.createElement("h2")
+head_Contacts.setAttribute("id","head_Contacts")
 head_Contacts.textContent="Our Contacts";
 OurContacts_div.appendChild(head_Contacts)
 
@@ -147,10 +148,10 @@ footer.appendChild(OurContacts_div)
 var OurGallery_div=document.createElement("div")
 OurGallery_div.setAttribute("id","OurGallery_div")
 
-var head2=document.createElement("h2")
-head2.setAttribute("id","headgalary")
-head2.textContent="Our Gallery"
-OurGallery_div.appendChild(head2)
+var headgalary=document.createElement("h2")
+headgalary.setAttribute("id","headgalary")
+headgalary.textContent="Our Gallery"
+OurGallery_div.appendChild(headgalary)
 
 
 var fristThreeImg=document.createElement("div")
@@ -203,10 +204,10 @@ OurGallery_div.appendChild(float_div)
 
 var Open_Hours_div=document.createElement("div")
 Open_Hours_div.setAttribute("id","Open_Hours_div")
-var head2=document.createElement("h2")
-head2.setAttribute("id","head2")
-head2.textContent="Open Hours"
-Open_Hours_div.appendChild(head2)
+var Open_Hours=document.createElement("h2")
+Open_Hours.setAttribute("id","Open_Hours")
+Open_Hours.textContent="Open Hours"
+Open_Hours_div.appendChild(Open_Hours)
 
 var days_and_times=document.createElement("div")
 days_and_times.setAttribute("id","days_and_times")

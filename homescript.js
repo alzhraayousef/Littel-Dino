@@ -197,7 +197,7 @@ text.appendChild(head2);
 parag1.textContent="Teaching children letters, words, mathematical operations and quizzes to develop their skills"
 text.appendChild(parag1);
 //a -> button
-link1.setAttribute("href","#");
+link1.setAttribute("href","LearningPage/home.html");
 link1.setAttribute("onmouseover","changeBackgroundColor(this)");
 link1.setAttribute("onmouseleave","resetBackgroundColor(this)");
 link1.textContent="Go";
@@ -260,7 +260,7 @@ parag1.textContent="Fun games that help develop intelligence, develop their thin
 text.appendChild(parag1);
 
 //a -> button
-link1.setAttribute("href","#");
+link1.setAttribute("href","games page/gamesPage.html");
 link1.setAttribute("onmouseover","changeBackgroundColor(this)");
 link1.setAttribute("onmouseleave","resetBackgroundColor(this)");
 link1.textContent="Go";
@@ -312,7 +312,7 @@ parag1.textContent="Short stories for kids have interesting characters, memorabl
 text.appendChild(parag1);
 
 //a -> button
-link1.setAttribute("href","#");
+link1.setAttribute("href","story/stories.html");
 link1.setAttribute("onmouseover","changeBackgroundColor(this)");
 link1.setAttribute("onmouseleave","resetBackgroundColor(this)");
 link1.textContent="Go";
