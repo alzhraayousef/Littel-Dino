@@ -1,0 +1,63 @@
+body
+{
+    margin: 0px;
+}
+#allKeyDiv
+{
+    display: flex;
+    margin-left: 10px;
+    
+}
+#allImgDiv
+{
+    display: flex;
+    
+    margin-top: 5%;
+}
+#float
+{
+    clear: both;
+}
+#contentDiv
+{
+    border: 5px dashed pink;
+    background-color: white;
+    width: 90%;
+    height: 500px;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.animalDiv
+{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-image: radial-gradient(circle,#2d4073 5%,rgb(244, 150, 166) 50%);
+    margin-left: 43px;
+}
+.Images{
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 12px;
+}
+
+.keys
+{
+    width: 8%;
+    height: 240px;
+    float: left;
+    margin-top: 4%;
+    margin-left: 15px;
+    padding-left: 10px;
+    border-radius: 5%;
+   background-image: linear-gradient(#2d4073 5%,rgb(102, 167, 216) 50%);
+   
+
+}
+.keys:hover
+{
+    transform: scale(.95,.95);
+}
+

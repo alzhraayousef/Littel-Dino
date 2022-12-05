@@ -5,14 +5,14 @@ body
 #contentDiv
 {
     width: 100%;
-    height: 2000px;
+    height: 3000px;
 }
-#mathDiv,#facePartDiv,#wordDiv,#quizDiv
+#mathDiv,#facePartDiv,#wordDiv,#quizDiv,#colorDiv,#pianoDiv
 {
     width: 100%;
     height: 490px;
 }
-#wordImg,#facePartImg
+#wordImg,#facePartImg,#colorImg
 {
     float: right;
     margin-right: 10%;
@@ -25,7 +25,7 @@ body
     opacity: 1;
     transition: opacity 3s ;
 }
-#mathImg,#quizImg
+#mathImg,#quizImg,#pianoImg
 {
     float: left;
     margin-left: 10%;
@@ -38,11 +38,11 @@ body
     opacity: 1;
     transition: opacity 3s ;
 }
-#quizImg:hover,#facePartImg:hover,#mathImg:hover,#wordImg:hover
+#quizImg:hover,#facePartImg:hover,#mathImg:hover,#wordImg:hover,#colorImg:hover,#pianoImg:hover
 {
     opacity: .6;
 }
-#facePartDiscribe,#wordDiscribe
+#facePartDiscribe,#wordDiscribe,#colorDiscribe
 {
     color: rgb(244, 150, 166);
     float: left;
@@ -50,7 +50,7 @@ body
     font-size: 30px;
 }
 
-#quizParagraph,#mathParagraph
+#quizParagraph,#mathParagraph,#pianoParagraph
 {
     float: right;
     margin-right: 16%;
@@ -60,7 +60,9 @@ body
     color: rgb(28, 28, 93);
     text-shadow: 10px 5px 5px gray;
 }
-#wordParagraph,#facePartParagraph
+#pianoParagraph{ margin-right: 10%;}
+
+#wordParagraph,#facePartParagraph,#colorParagraph
 {
     float: left;
     margin-left: 10%;
@@ -70,7 +72,7 @@ body
     color: rgb(28, 28, 93);
     text-shadow: 10px 5px 5px gray;
 }
-#mathDiscribe,#quizDiscribe
+#mathDiscribe,#quizDiscribe,#pianoDiscribe
 {
     color: rgb(244, 150, 166);
     float: right;

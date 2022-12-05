@@ -1,0 +1,55 @@
+#colorsContent{
+    display: flex;
+    width: 94%;
+    background-color: rgba(255, 246, 234, 0.726);
+    padding: 40px;
+    margin-top: 100px;
+}
+#redDiv,#pinkDiv,#blueDiv,#greenDiv,#yellowDiv,#purpleDiv,#blackDiv,#whiteDiv,#brownDiv{
+    width: 180px;
+    height: 200px;
+    border-radius: 20px;
+    margin-left: 20px;
+    transition: 1.5s;
+}
+#redDiv:hover,#pinkDiv:hover,#blueDiv:hover,#greenDiv:hover,#yellowDiv:hover,#purpleDiv:hover,#blackDiv:hover,#whiteDiv:hover,#brownDiv:hover{
+    transform: translateY(30px);
+}
+#redDiv{
+    background-color: rgba(255, 0, 0, 0.707);
+}
+#pinkDiv{
+    background-color: rgba(240, 128, 128, 0.811);
+}
+#blueDiv{
+    background-color: rgba(0, 0, 255, 0.766);
+}
+#greenDiv{
+    background-color: rgba(0, 128, 0, 0.756);
+}
+#yellowDiv{
+    background-color: rgba(255, 255, 0, 0.763);
+}
+#purpleDiv{
+    background-color: rgba(255, 68, 0, 0.586);
+}
+#blackDiv{
+    background-color: rgba(0, 0, 0, 0.738);
+}
+#whiteDiv{
+    background-color: rgba(255, 255, 255, 0.751);
+}
+#brownDiv{
+    background-color: rgba(165, 42, 42, 0.752);
+}
+#color{
+    font-size: 90px;
+    font-weight: bold;
+    margin-top: 200px;
+    margin-left: 600px;
+}
+#imgColor{
+    width: 100px;
+    height: 200px;
+}
+

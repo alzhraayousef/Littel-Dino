@@ -59,7 +59,7 @@ function gamesParent(){
     var gamesParent=document.createElement("fieldset")
     gamesParent.style.border="3px solid pink "
     gamesParent.style.borderRadius="25px "
-    gamesParent.style.paddingLeft="15% "
+    gamesParent.style.paddingLeft="20% "
     var x = document.createElement("LEGEND");
     var t = document.createTextNode("Funny Games");
     
@@ -97,7 +97,7 @@ function gamesParent(){
     QuizGames.style.border="3px solid lightBlue "
     QuizGames.style.borderRadius="25px "
     QuizGames.style.marginTop="5% "
-    QuizGames.style.paddingLeft="15% "
+    QuizGames.style.paddingLeft="30% "
     var x = document.createElement("LEGEND");
     var t = document.createTextNode("Brain Games");
     x.style.fontSize="30px"
@@ -113,14 +113,6 @@ function gamesParent(){
         
     })
    
-    var Guess_color=gameDiv("#e1fae6","Guess Color","fa-solid fa-palette")
-    QuizGames.appendChild(Guess_color)
-    Guess_color.addEventListener("click",function(){
-        open("GuessColor/Guesscolor.html","_self")
-
-        
-        
-    })
     
     var GussNumber=gameDiv("rgb(226, 205, 244)","Guss Number","fa-solid fa-question")
     QuizGames.appendChild(GussNumber)
